@@ -157,7 +157,7 @@ button {
     <div class="container top">
       <div class="heading">
         <h2>Our Rooms</h2>
-        <p>Book a room</p> 
+        <p>Book a room</p>
       </div>
 
       <div class="content mtop">
