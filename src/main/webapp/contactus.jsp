@@ -270,7 +270,6 @@ textarea.fields:not(:placeholder-shown) ~ .labels {
   }
   
   
-  
   #submitbtn {
   	width: 55%;
     height: 50px;
