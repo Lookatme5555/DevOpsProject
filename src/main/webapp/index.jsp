@@ -5,6 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <style>
+	body {
+		margin: 0;
+	}
 /* This part is the body  */
 	.flex {
     display: flex;
@@ -158,6 +161,7 @@
 </style>
 <title>Lazy Hotels</title>
 </head>
+<body>
 <nav>
   <a href="index.jsp">Home</a>
   <a href="locateus.jsp">Locate Us</a>
@@ -165,7 +169,6 @@
   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Restaurant & Shops</a>
   <a href="contactus.jsp">Contacts</a>
 </nav>
-<body>
 
 
 <svg class="hotel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px">
