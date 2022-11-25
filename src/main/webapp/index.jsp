@@ -159,11 +159,11 @@
 <title>Lazy Hotels</title>
 </head>
 <nav>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Home</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Locate Us</a>
+  <a href="index.jsp">Home</a>
+  <a href="locateus.jsp">Locate Us</a>
   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Rooms</a>
   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Restaurant & Shops</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contacts</a>
+  <a href="contactus.jsp">Contacts</a>
 </nav>
 <body>
 
