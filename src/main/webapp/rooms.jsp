@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <meta charset="ISO-8859-1">
 <title>Rooms</title>
 <style>
@@ -94,9 +95,13 @@ button {
 
 .rooms i {
   font-size: 12px;
-  color: #fbb234;
+  color: #d6d8d8;
   margin: 15px 0;
   margin-right: 5px;
+}
+
+.checked {
+  color: #fbb234 !important;
 }
 
 .rooms p {
@@ -148,125 +153,44 @@ button {
 <body>
 <nav>
   <a href="index.jsp">Home</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Locate Us</a>
+  <a href="locateus.jsp">Locate Us</a>
   <a href="rooms.jsp">Rooms</a>
   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Restaurant & Shops</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contacts</a>
+  <a href="contactus.jsp">Contacts</a>
 </nav>
  <section class="rooms">
     <div class="container top">
-      <div class="heading">
-        <h2>Our Rooms</h2>
-        <p>Book a room</p>
-      </div>
+		<a href="addroom.jsp">Add a room</a>
+		<div class="heading">
+		  <h2>Our Rooms</h2>
+		  <p>Book a room</p>
+		</div>
 
       <div class="content mtop">
         <div class="owl-carousel owl-carousel1 owl-theme">
-          <div class="items">
-            <div class="image">
-            	<img src="https://www.carltonhotel.sg/uploads/9/8/2/4/98249840/studio-room_19_orig.jpg" alt="Meeting Room Image">
-            </div>
-            <div class="text">
-              <h2>Hotel Room</h2>
-              <div class="rate flex">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
-              </p>
-              <div class="button flex">
-                <button class="primary-btn">BOOK NOW</button>
-                <h3>$250 <span> <br> Per Night </span> </h3>
-              </div>
-            </div>
-          </div>
-          <div class="items">
-            <div class="image">
-            	<img src="https://www.carltonhotel.sg/uploads/9/8/2/4/98249840/studio-room_19_orig.jpg" alt="Meeting Room Image">
-            </div>
-            <div class="text">
-              <h2>Hotel Room</h2>
-              <div class="rate flex">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
-              </p>
-              <div class="button flex">
-                <button class="primary-btn">BOOK NOW</button>
-                <h3>$250 <span> <br> Per Night </span> </h3>
-              </div>
-            </div>
-          </div>
-          <div class="items">
-            <div class="image">
-            	<img src="https://www.carltonhotel.sg/uploads/9/8/2/4/98249840/studio-room_19_orig.jpg" alt="Meeting Room Image">
-            </div>
-            <div class="text">
-              <h2>Hotel Room</h2>
-              <div class="rate flex">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
-              </p>
-              <div class="button flex">
-                <button class="primary-btn">BOOK NOW</button>
-                <h3>$250 <span> <br> Per Night </span> </h3>
-              </div>
-            </div>
-          </div>
-          <div class="items">
-            <div class="image">
-            	<img src="https://www.carltonhotel.sg/uploads/9/8/2/4/98249840/studio-room_19_orig.jpg" alt="Meeting Room Image">
-            </div>
-            <div class="text">
-              <h2>Hotel Room</h2>
-              <div class="rate flex">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
-              </p>
-              <div class="button flex">
-                <button class="primary-btn">BOOK NOW</button>
-                <h3>$250 <span> <br> Per Night </span> </h3>
-              </div>
-            </div>
-          </div>
-          <div class="items">
-            <div class="image">
-            	<img src="https://www.carltonhotel.sg/uploads/9/8/2/4/98249840/studio-room_19_orig.jpg" alt="Meeting Room Image">
-            </div>
-            <div class="text">
-              <h2>Hotel Room</h2>
-              <div class="rate flex">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
-              </p>
-              <div class="button flex">
-                <button class="primary-btn">BOOK NOW</button>
-                <h3>$250 <span> <br> Per Night </span> </h3>
-              </div>
-            </div>
-          </div>
+       	  <c:forEach var="room" items="${rooms}">
+       	  	<div class="items">
+	            <div class="image">
+	            	<img src="<c:out value="${room.img}" />" alt="Meeting Room Image">
+	            </div>
+	            <div class="text">
+	              <h2><c:out value="${room.roomName}" /></h2>
+	              <div class="rate flex">
+	              	<p class="ratingNo" style="display: none;"><c:out value="${room.rating}" /></p>
+	                <i class="fa fa-star"></i>
+	                <i class="fa fa-star"></i>
+	                <i class="fa fa-star"></i>
+	                <i class="fa fa-star"></i>
+	                <i class="fa fa-star"></i>
+	              </div>
+	              <p><c:out value="${room.description}" /></p>
+	              <div class="button flex">
+	                <button class="primary-btn">BOOK NOW</button>
+	                <h3>$<c:out value="${room.price}" /> <span> <br> Per Night </span> </h3>
+	              </div>
+	            </div>
+	          </div>
+       	  </c:forEach>
         </div>
       </div>
     </div>
@@ -296,6 +220,11 @@ button {
             items: 3
           }
         }
+    })
+    $(document).ready(function() {
+        $(".ratingNo").each(function(i, obj) {
+       		$(obj).siblings().slice(0, parseInt($(obj).html())).addClass("checked")
+        })
     })
   </script>
 </body>
