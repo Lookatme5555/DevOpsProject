@@ -16,6 +16,7 @@
  html, body, .flex {
     height: 100%;
     width: 100%;
+    margin: 0;
     background: #191D32;
 }
 /* Nav */
@@ -303,7 +304,7 @@ textarea.fields:not(:placeholder-shown) ~ .labels {
 <nav>
   <a href="index.jsp">Home</a>
   <a href="locateus.jsp">Locate Us</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Rooms</a>
+  <a href="rooms.jsp">Rooms</a>
   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Restaurant & Shops</a>
   <a href="contactus.jsp">Contacts</a>
 </nav>
