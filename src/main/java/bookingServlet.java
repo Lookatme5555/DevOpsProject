@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -20,17 +19,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class roomServlet
+ * Servlet implementation class bookingServlet
  */
-@WebServlet("/roomServlet")
-public class roomServlet extends HttpServlet {
+@WebServlet("/bookingServlet")
+public class bookingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public roomServlet() {
+    public bookingServlet() {
         super();
+        // TODO Auto-generated constructor stub
     }
     
     protected Connection connect() {
@@ -65,17 +65,13 @@ public class roomServlet extends HttpServlet {
     	request.setAttribute("rooms", rooms);
     	request.getRequestDispatcher("/rooms.jsp").forward(request, response);
     }
-    
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-        	getRooms(request, response);
-        } catch(SQLException e) {
-        	e.printStackTrace();
-    	}
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -85,7 +81,7 @@ public class roomServlet extends HttpServlet {
 		try {
 			Map<String, String[]> params = request.getParameterMap();
 			Connection con = connect();
-			PreparedStatement ps = con.prepareStatement("insert into rooms values(?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+			PreparedStatement ps = con.prepareStatement("insert into bookings values(?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
 			int i = 1;
 			for (Map.Entry<String, String[]> entry : params.entrySet()) {
 				String entryStr = entry.getValue()[0];

@@ -16,6 +16,7 @@
  html, body, .flex {
     height: 100%;
     width: 100%;
+    margin: 0;
     background: #191D32;
 }
 /* Nav */
