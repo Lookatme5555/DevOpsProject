@@ -164,7 +164,7 @@
 <nav>
   <a href="index.jsp">Home</a>
   <a href="rooms.jsp">Rooms</a>
-  <a href="shops.jsp">Restaurant & Shops</a>
+  <a href="shops.jsp">Shops</a>
   <a href="contactus.jsp">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
 </nav>

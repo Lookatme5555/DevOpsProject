@@ -1,7 +1,3 @@
-<!-- THIS PAGE MAY HAVE TO BE DELETED  -->
-<!-- REQUIRES JAVASCRIPT TO CREATE MAP -->
-<!-- DELETE THIS COMMENTS BEFORE SUBMISSION! -->
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -195,7 +191,7 @@ i {
 <nav>
   <a href="index.jsp">Home</a>
   <a href="rooms.jsp">Rooms</a>
-  <a href="shops.jsp">Restaurant & Shops</a>
+  <a href="shops.jsp">Shops</a>
   <a href="contactus.jsp">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
 </nav>
