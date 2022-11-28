@@ -145,14 +145,15 @@ button {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
 <nav>
   <a href="index.jsp">Home</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Locate Us</a>
   <a href="rooms.jsp">Rooms</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Restaurant & Shops</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contacts</a>
+  <a href="shops.jsp">Restaurant & Shops</a>
+  <a href="contactus.jsp">Contacts</a>
+  <a href="locateus.jsp">Locate Us</a>
 </nav>
+<body>
+
  <section class="rooms">
     <div class="container top">
       <div class="heading">

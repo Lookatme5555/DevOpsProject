@@ -292,20 +292,43 @@ textarea.fields:not(:placeholder-shown) ~ .labels {
 	  from {background: #272727;}
 	  to {background: #636363;}
 	}
-  
+	
+  input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
   
 
 </style>
-<title>Contact Us Page</title>
+<title>Contact Us</title>
 </head>
 
 <body>
 <nav>
   <a href="index.jsp">Home</a>
-  <a href="locateus.jsp">Locate Us</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Rooms</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Restaurant & Shops</a>
+  <a href="rooms.jsp">Rooms</a>
+  <a href="shops.jsp">Restaurant & Shops</a>
   <a href="contactus.jsp">Contacts</a>
+  <a href="locateus.jsp">Locate Us</a>
 </nav>
 
 <br>
@@ -317,6 +340,7 @@ textarea.fields:not(:placeholder-shown) ~ .labels {
 <h2>hotel@hotel.com</h2><h2>+65 6225 5744</h2>
 </div>
 <br>
+<div style = "height: 700px">
 <div class="container">
    <div class="inputform">
     <input id="fullnametxtfield" class="fields" placeholder="Please fill full name" type="input" required/>
@@ -341,6 +365,7 @@ textarea.fields:not(:placeholder-shown) ~ .labels {
   <div id="submitbuttondiv">
 	  <button id="submitbtn">Submit</button>
   </div>
+</div>
 </div>
 </body>
 </html>
