@@ -14,11 +14,16 @@
 }
 
  html, body, .flex {
- 	height: 10%;
+ 	height: 100%;
     width: 100%;
     margin: 0;
     background: #191D32;
 }
+
+body {
+	display: flex;
+}
+
 /* Nav */
 @import url("https://fonts.googleapis.com/css?family=Oswald:500");
  .thx {
@@ -54,7 +59,7 @@
     top: 40%;
     animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
- nav a:hover:before {
+ nav a:not(.active):hover:before {
     animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
  @keyframes in {
@@ -80,7 +85,34 @@
        left: auto;
        right: 0;
    }
+}
 
+ @keyframes show {
+    0% {
+       opacity: 0;
+       transform: translateY(-10px);
+   }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+ nav a:nth-child(1) {
+    animation: show 0.2s 1.1s ease 1 both;
+}
+ nav a:nth-child(2) {
+    animation: show 0.2s 1.2s ease 1 both;
+}
+ nav a:nth-child(3) {
+    animation: show 0.2s 1.3s ease 1 both;
+}
+ nav a:nth-child(4) {
+    animation: show 0.2s 1.4s ease 1 both;
+}
+ nav a:nth-child(5) {
+    animation: show 0.2s 1.5s ease 1 both;
+    color: white;
+}
 
 
 .container {
@@ -92,7 +124,7 @@
 .map {
   width: 700px;
   height: 380px;
-  margin: calc(50vh - 190px) auto;
+  margin: auto;
   box-shadow: 0 0 40px -10px black;
   background: rgb(240, 240, 240);
   font-family: 'Montserrat', sans-serif;
@@ -163,28 +195,28 @@ i {
 </style>
 <title>Locate Lazy Hotels</title>
 </head>
-<nav>
-  <a href="index.jsp">Home</a>
-  <a href="roomServlet">Rooms</a>
-  <a href="shops.jsp">Shops</a>
-  <a href="contactus.jsp">Contacts</a>
-  <a href="locateus.jsp">Locate Us</a>
-</nav>
 <body>
-<div class="map">
-  <div id="map">
-  	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.188539234005!2d103.93277596778987!3d1.
-  	3450929183402296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d69fed56771%3A0x8bf2e2929d84a296!2sTemasek%20Polytechnic
-  	!5e0!3m2!1sen!2ssg!4v1669623325866!5m2!1sen!2ssg" 
-  	width="470" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-  <div class="map-c">
-    <h1>Lazy Hotels</h1>
-    <p>It's Right here !!</p>
-    <div class="det"><i class="fa fa-map-marker"></i> 21 Tampines Ave 1, Singapore 529757</div>
-    <div class="det"><i class="fa fa-phone"></i> +65 9807 6767</div>
-    <div class="det"><i class="fa fa-globe"></i> http://localhost:8080</div>
-  </div>
-</div>
+	<nav>
+	  <a href="index.jsp">Home</a>
+	  <a href="roomServlet">Rooms</a>
+	  <a href="shops.jsp">Shops</a>
+	  <a href="contactus.jsp">Contacts</a>
+	  <a href="locateus.jsp" class="active">Locate Us</a>
+	</nav>
+	<div class="map">
+	  <div id="map">
+	  	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.188539234005!2d103.93277596778987!3d1.
+	  	3450929183402296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d69fed56771%3A0x8bf2e2929d84a296!2sTemasek%20Polytechnic
+	  	!5e0!3m2!1sen!2ssg!4v1669623325866!5m2!1sen!2ssg" 
+	  	width="470" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	  </div>
+	  <div class="map-c">
+	    <h1>Lazy Hotels</h1>
+	    <p>It's Right here !!</p>
+	    <div class="det"><i class="fa fa-map-marker"></i> 21 Tampines Ave 1, Singapore 529757</div>
+	    <div class="det"><i class="fa fa-phone"></i> +65 9807 6767</div>
+	    <div class="det"><i class="fa fa-globe"></i> http://localhost:8080</div>
+	  </div>
+	</div>
 </body>
 </html>

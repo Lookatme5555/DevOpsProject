@@ -53,7 +53,7 @@
     top: 40%;
     animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
- nav a:hover:before {
+ nav a:not(.active):hover:before {
     animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
  @keyframes in {
@@ -98,6 +98,7 @@
 }
  nav a:nth-child(3) {
     animation: show 0.2s 1.3s ease 1 both;
+    color: white;
 }
  nav a:nth-child(4) {
     animation: show 0.2s 1.4s ease 1 both;
@@ -316,7 +317,7 @@ section {
 <nav>
   <a href="index.jsp">Home</a>
   <a href="rooms.jsp">Rooms</a>
-  <a href="shops.jsp">Shops</a>
+  <a href="shops.jsp" class="active">Shops</a>
   <a href="contactus.jsp">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
 </nav>
