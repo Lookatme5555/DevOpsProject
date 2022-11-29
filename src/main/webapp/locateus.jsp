@@ -16,6 +16,7 @@
  html, body, .flex {
  	height: 10%;
     width: 100%;
+    margin: 0;
     background: #191D32;
 }
 /* Nav */
@@ -79,32 +80,6 @@
        left: auto;
        right: 0;
    }
-}
- @keyframes show {
-    0% {
-       opacity: 0;
-       transform: translateY(-10px);
-   }
-    100% {
-       opacity: 1;
-       transform: translateY(0);
-   }
-}
- nav a:nth-child(1) {
-    animation: show 0.2s 1.1s ease 1 both;
-}
- nav a:nth-child(2) {
-    animation: show 0.2s 1.2s ease 1 both;
-}
- nav a:nth-child(3) {
-    animation: show 0.2s 1.3s ease 1 both;
-}
- nav a:nth-child(4) {
-    animation: show 0.2s 1.4s ease 1 both;
-}
- nav a:nth-child(5) {
-    animation: show 0.2s 1.5s ease 1 both;
-}
 
 
 
@@ -190,7 +165,7 @@ i {
 </head>
 <nav>
   <a href="index.jsp">Home</a>
-  <a href="rooms.jsp">Rooms</a>
+  <a href="roomServlet">Rooms</a>
   <a href="shops.jsp">Shops</a>
   <a href="contactus.jsp">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
