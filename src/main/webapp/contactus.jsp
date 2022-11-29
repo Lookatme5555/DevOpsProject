@@ -19,6 +19,10 @@
     margin: 0;
     background: #191D32;
 }
+
+body {
+	height: 75vh;
+}
 /* Nav */
 @import url("https://fonts.googleapis.com/css?family=Oswald:500");
  .thx {
@@ -82,31 +86,6 @@
        right: 0;
    }
 }
- @keyframes show {
-    0% {
-       opacity: 0;
-       transform: translateY(-10px);
-   }
-    100% {
-       opacity: 1;
-       transform: translateY(0);
-   }
-}
- nav a:nth-child(1) {
-    animation: show 0.2s 1.1s ease 1 both;
-}
- nav a:nth-child(2) {
-    animation: show 0.2s 1.2s ease 1 both;
-}
- nav a:nth-child(3) {
-    animation: show 0.2s 1.3s ease 1 both;
-}
- nav a:nth-child(4) {
-    animation: show 0.2s 1.4s ease 1 both;
-}
- nav a:nth-child(5) {
-    animation: show 0.2s 1.5s ease 1 both;
-}
 
 
 #contactheader {
@@ -117,8 +96,9 @@
 
 #contactheaderdiv {
 	text-align: center;
-    color: white
-    
+    color: white;
+	margin-top: 10vh;
+	margin-bottom: 5vh;
 }
 
 #contactheaderdiv h2 {
@@ -331,17 +311,11 @@ input[type=submit]:hover {
   <a href="contactus.jsp">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
 </nav>
-
-<br>
-<br>
-<br>
-<br>
 <div id="contactheaderdiv">
-<p id="contactheader">Contact Us</p>
-<h2>hotel@hotel.com</h2><h2>+65 6225 5744</h2>
+	<p id="contactheader">Contact Us</p>
+	<h2>hotel@hotel.com</h2><h2>+65 6225 5744</h2>
 </div>
-<br>
-<div style = "height: 700px">
+<div>
 <div class="container">
    <div class="inputform">
     <input id="fullnametxtfield" class="fields" placeholder="Please fill full name" type="input" required/>

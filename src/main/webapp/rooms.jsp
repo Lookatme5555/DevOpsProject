@@ -325,7 +325,8 @@ button {
   overflow: hidden;
   transition: .5s;
   margin-top: 40px;
-  letter-spacing: 4px
+  letter-spacing: 4px;
+  cursor: pointer;
 }
 
 .login-box .submit-label:hover {

@@ -18,6 +18,15 @@
     width: 100%;
     background: #191D32;
 }
+
+body {
+	margin: 0;
+	display: flex;
+}
+
+section {
+	margin: auto;
+}
 /* Nav */
 @import url("https://fonts.googleapis.com/css?family=Oswald:500");
  .thx {
@@ -80,31 +89,6 @@
        right: 0;
    }
 }
- @keyframes show {
-    0% {
-       opacity: 0;
-       transform: translateY(-10px);
-   }
-    100% {
-       opacity: 1;
-       transform: translateY(0);
-   }
-}
- nav a:nth-child(1) {
-    animation: show 0.2s 1.1s ease 1 both;
-}
- nav a:nth-child(2) {
-    animation: show 0.2s 1.2s ease 1 both;
-}
- nav a:nth-child(3) {
-    animation: show 0.2s 1.3s ease 1 both;
-}
- nav a:nth-child(4) {
-    animation: show 0.2s 1.4s ease 1 both;
-}
- nav a:nth-child(5) {
-    animation: show 0.2s 1.5s ease 1 both;
-}
 
 input[type=text], select, textarea {
   width: 100%;
@@ -142,7 +126,6 @@ section {
  .container {
     max-width: 1044px;
     margin: 0 auto;
-    padding: 0 20px;
 }
  .carousel {
     display: block;
@@ -321,10 +304,6 @@ section {
   <a href="locateus.jsp">Locate Us</a>
 </nav>
 <body>
-<br>
-<br>
-<br>
-<br>
 <section>
     <div class="container">
         <div class="carousel">
