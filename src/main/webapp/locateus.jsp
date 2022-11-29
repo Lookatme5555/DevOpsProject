@@ -5,7 +5,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <style>
-<style>
 /* This part is the body  */
 	.flex {
     display: flex;
@@ -15,7 +14,7 @@
 }
 
  html, body, .flex {
-    height: 100%;
+ 	height: 10%;
     width: 100%;
     margin: 0;
     background: #191D32;
@@ -82,47 +81,110 @@
        right: 0;
    }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
 
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
 
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+
 }
+
+.map {
+  width: 700px;
+  height: 380px;
+  margin: calc(50vh - 190px) auto;
+  box-shadow: 0 0 40px -10px black;
+  background: rgb(240, 240, 240);
+  font-family: 'Montserrat', sans-serif;
+  max-width: calc(100vw - 60px)
+}
+
+#map {
+  width: 65%;
+  height: 380px;
+  display: inline-block
+}
+
+.map-c {
+  float: right;
+  width: 35%;
+  height: 100%;
+  padding: 25px;
+  box-sizing: border-box
+}
+
+h1 {
+  margin: 0;
+  font-weight: normal;
+  color: rgb(60, 60, 70);
+  font-size: 28px
+}
+
+
+
+.det {
+  font-size: 12px;
+  margin-bottom: 15px
+}
+
+i {
+  float: left;
+  font-size: 18px !important;
+  margin: 0 8px 0 0
+}
+
+@media only screen and (max-width: 720px) {
+  .map {
+    height: 450px;
+    margin: calc(50vh - 225px) auto;
+    overflow: hidden
+  }
+  #map {
+    width: 100%;
+    height: 200px;
+  }
+  .map-c {
+    float: right;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  p {
+    display: none
+  }
+  h1 {
+    margin-bottom:20px
+  }
+  .det {
+    margin-bottom: 9px
+  }
  
 </style>
-</style>
-<title>Locate Us Page</title>
+<title>Locate Lazy Hotels</title>
 </head>
-<body>
 <nav>
   <a href="index.jsp">Home</a>
-  <a href="locateus.jsp">Locate Us</a>
-  <a href="rooms.jsp">Rooms</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Restaurant & Shops</a>
+  <a href="roomServlet">Rooms</a>
+  <a href="shops.jsp">Shops</a>
   <a href="contactus.jsp">Contacts</a>
+  <a href="locateus.jsp">Locate Us</a>
 </nav>
+<body>
+<div class="map">
+  <div id="map">
+  	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.188539234005!2d103.93277596778987!3d1.
+  	3450929183402296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d69fed56771%3A0x8bf2e2929d84a296!2sTemasek%20Polytechnic
+  	!5e0!3m2!1sen!2ssg!4v1669623325866!5m2!1sen!2ssg" 
+  	width="470" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="map-c">
+    <h1>Lazy Hotels</h1>
+    <p>It's Right here !!</p>
+    <div class="det"><i class="fa fa-map-marker"></i> 21 Tampines Ave 1, Singapore 529757</div>
+    <div class="det"><i class="fa fa-phone"></i> +65 9807 6767</div>
+    <div class="det"><i class="fa fa-globe"></i> http://localhost:8080</div>
+  </div>
+</div>
 </body>
 </html>
