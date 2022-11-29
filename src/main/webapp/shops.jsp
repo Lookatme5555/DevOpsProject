@@ -18,6 +18,15 @@
     width: 100%;
     background: #191D32;
 }
+
+body {
+	margin: 0;
+	display: flex;
+}
+
+section {
+	margin: auto;
+}
 /* Nav */
 @import url("https://fonts.googleapis.com/css?family=Oswald:500");
  .thx {
@@ -107,6 +116,7 @@
     animation: show 0.2s 1.5s ease 1 both;
 }
 
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -143,7 +153,6 @@ section {
  .container {
     max-width: 1044px;
     margin: 0 auto;
-    padding: 0 20px;
 }
  .carousel {
     display: block;
@@ -322,10 +331,6 @@ section {
   <a href="locateus.jsp">Locate Us</a>
 </nav>
 <body>
-<br>
-<br>
-<br>
-<br>
 <section>
     <div class="container">
         <div class="carousel">

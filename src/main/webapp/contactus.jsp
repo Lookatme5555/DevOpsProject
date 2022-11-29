@@ -19,6 +19,10 @@
     margin: 0;
     background: #191D32;
 }
+
+body {
+	height: 75vh;
+}
 /* Nav */
 @import url("https://fonts.googleapis.com/css?family=Oswald:500");
  .thx {
@@ -82,6 +86,7 @@
        right: 0;
    }
 }
+
  @keyframes show {
     0% {
        opacity: 0;
@@ -118,8 +123,9 @@
 
 #contactheaderdiv {
 	text-align: center;
-    color: white
-    
+    color: white;
+	margin-top: 10vh;
+	margin-bottom: 5vh;
 }
 
 #contactheaderdiv h2 {
@@ -332,17 +338,11 @@ input[type=submit]:hover {
   <a href="contactus.jsp" class="active">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
 </nav>
-
-<br>
-<br>
-<br>
-<br>
 <div id="contactheaderdiv">
-<p id="contactheader">Contact Us</p>
-<h2>hotel@hotel.com</h2><h2>+65 6225 5744</h2>
+	<p id="contactheader">Contact Us</p>
+	<h2>hotel@hotel.com</h2><h2>+65 6225 5744</h2>
 </div>
-<br>
-<div style = "height: 700px">
+<div>
 <div class="container">
    <div class="inputform">
     <input id="fullnametxtfield" class="fields" placeholder="Please fill full name" type="input" required/>

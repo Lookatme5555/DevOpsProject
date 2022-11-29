@@ -114,7 +114,6 @@ body {
     color: white;
 }
 
-
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -202,6 +201,7 @@ i {
 	  <a href="shops.jsp">Shops</a>
 	  <a href="contactus.jsp">Contacts</a>
 	  <a href="locateus.jsp" class="active">Locate Us</a>
+	  <a href="locateus.jsp">Locate Us</a>
 	</nav>
 	<div class="map">
 	  <div id="map">
