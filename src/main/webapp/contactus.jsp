@@ -59,7 +59,7 @@ body {
     top: 40%;
     animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
- nav a:hover:before {
+ nav a:not(.active):hover:before {
     animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
  @keyframes in {
@@ -85,6 +85,33 @@ body {
        left: auto;
        right: 0;
    }
+}
+
+ @keyframes show {
+    0% {
+       opacity: 0;
+       transform: translateY(-10px);
+   }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+ nav a:nth-child(1) {
+    animation: show 0.2s 1.1s ease 1 both;
+}
+ nav a:nth-child(2) {
+    animation: show 0.2s 1.2s ease 1 both;
+}
+ nav a:nth-child(3) {
+    animation: show 0.2s 1.3s ease 1 both;
+}
+ nav a:nth-child(4) {
+    animation: show 0.2s 1.4s ease 1 both;
+    color: white;
+}
+ nav a:nth-child(5) {
+    animation: show 0.2s 1.5s ease 1 both;
 }
 
 
@@ -308,7 +335,7 @@ input[type=submit]:hover {
   <a href="index.jsp">Home</a>
   <a href="roomServlet">Rooms</a>
   <a href="shops.jsp">Shops</a>
-  <a href="contactus.jsp">Contacts</a>
+  <a href="contactus.jsp" class="active">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
 </nav>
 <div id="contactheaderdiv">

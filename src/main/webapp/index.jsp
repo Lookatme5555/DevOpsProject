@@ -105,7 +105,7 @@
     top: 40%;
     animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
- nav a:hover:before {
+ nav a:not(.active):hover:before {
     animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
  @keyframes in {
@@ -144,6 +144,7 @@
 }
  nav a:nth-child(1) {
     animation: show 0.2s 1.1s ease 1 both;
+    color: white;
 }
  nav a:nth-child(2) {
     animation: show 0.2s 1.2s ease 1 both;
@@ -162,7 +163,7 @@
 <title>Lazy Hotels</title>
 </head>
 <nav>
-  <a href="index.jsp">Home</a>
+  <a href="index.jsp" class="active">Home</a>
   <a href="roomServlet">Rooms</a>
   <a href="shops.jsp">Shops</a>
   <a href="contactus.jsp">Contacts</a>
