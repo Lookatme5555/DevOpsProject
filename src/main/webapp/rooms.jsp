@@ -47,6 +47,11 @@ body {
  nav a.not(.active):hover:before {
     animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
+
+nav a:last-child {
+	float: right;
+}
+
  @keyframes in {
     0% {
        width: 0;
@@ -96,6 +101,11 @@ body {
  nav a:nth-child(5) {
     animation: show 0.2s 1.5s ease 1 both;
 }
+
+nav a:nth-child(6) {
+    animation: show 0.2s 1.5s ease 1 both;
+}
+
 nav.active {
 	color: white;
 }
@@ -547,6 +557,7 @@ button {
   <a href="shops.jsp">Shops</a>
   <a href="contactus.jsp">Contacts</a>
   <a href="locateus.jsp">Locate Us</a>
+  <a href="verificationpage.jsp">login/sign up</a>
 </nav>
 <body>
 

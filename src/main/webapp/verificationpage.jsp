@@ -116,6 +116,10 @@ nav a:last-child {
     animation: show 0.2s 1.5s ease 1 both;
 }
 
+ nav a:nth-child(6) {
+    animation: show 0.2s 1.5s ease 1 both;
+}
+
 .container{
     position: relative;
     max-width: 430px;
