@@ -15,7 +15,7 @@
     overflow: hidden;
     background: #111;
 }
- .hotel {
+ .hotel {.
     opacity: 0;
     animation: blink 5s infinite;
     filter: drop-shadow(0px 0px 10px #ff0dff);
