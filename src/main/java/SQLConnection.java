@@ -21,11 +21,7 @@ public class SQLConnection {
     	Connection con = null;
     	try {
     		Class.forName("com.mysql.jdbc.Driver");
-    		con = DriverManager.getConnection("jdbc:mysql://3.95.157.93:3306/hotelsdb", "admin", "password");
-    		System.out.print(con);
-    		if (con == null) {
-        		System.out.print("Connection timed out");
-    		}
+    		con = DriverManager.getConnection("jdbc:mysql://localhost:3307/hotelsdb", "root", "password");
     	} catch(SQLException e) {
     		e.printStackTrace();
     	} catch(ClassNotFoundException e) {
@@ -35,42 +31,35 @@ public class SQLConnection {
     }
     
     protected PreparedStatement addToPS(String sql, Map<String, String[]> params) throws SQLException, IOException, ServletException {
-    	Connection con = connect();
-    	PreparedStatement ps = null;
-    	if (con != null) {
-	    	ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-			int i = 1;
-			for (Map.Entry<String, String[]> entry : params.entrySet()) {
-				String entryStr = entry.getValue()[0];
-				try {
-					ps.setInt(i, Integer.parseInt(entryStr));
-			    } catch (NumberFormatException nfe) {
-					ps.setString(i, entryStr);
-			    }
-				i++;
-			}
-    	}
+    	PreparedStatement ps = connect().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+		int i = 1;
+		for (Map.Entry<String, String[]> entry : params.entrySet()) {
+			String entryStr = entry.getValue()[0];
+			try {
+				ps.setInt(i, Integer.parseInt(entryStr));
+		    } catch (NumberFormatException nfe) {
+				ps.setString(i, entryStr);
+		    }
+			i++;
+		}
 		return ps;
     }
     
     public ArrayList<Map<String, Object>> getTable(String dbName) throws SQLException, IOException, ServletException {
     	ArrayList<Map<String, Object>> tableList = new ArrayList<Map<String, Object>>();
-    	Connection con = connect();
-    	if (con != null) {
-    		try (PreparedStatement ps = con.prepareStatement("select * from " + dbName)) {
-	    		ResultSet rs = ps.executeQuery();
-	    		ResultSetMetaData md = rs.getMetaData();
-	    		int columns = md.getColumnCount();
-	    		while (rs.next()) {
-	    			Map<String, Object> row = new HashMap<String, Object>(columns);
-	    		    for (int i = 1; i <= columns; ++i) {          
-	    		    	 row.put(md.getColumnName(i), rs.getObject(i));
-			     	}
-	    		    tableList.add(row);
-				}
-	    	} catch(SQLException e) {
-	    		System.out.println(e.getMessage());
-	    	}
+    	try (PreparedStatement ps = connect().prepareStatement("select * from " + dbName)) {
+    		ResultSet rs = ps.executeQuery();
+    		ResultSetMetaData md = rs.getMetaData();
+    		int columns = md.getColumnCount();
+    		while (rs.next()) {
+    			Map<String, Object> row = new HashMap<String, Object>(columns);
+    		    for (int i = 1; i <= columns; ++i) {          
+    		    	 row.put(md.getColumnName(i), rs.getObject(i));
+		     	}
+    		    tableList.add(row);
+			}
+    	} catch(SQLException e) {
+    		System.out.println(e.getMessage());
     	}
     	return tableList;
     }
