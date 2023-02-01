@@ -15,13 +15,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 public class SQLConnection {
 	
     protected Connection connect() {
     	Connection con = null;
     	try {
     		Class.forName("com.mysql.jdbc.Driver");
-    		con = DriverManager.getConnection("jdbc:mysql://3.95.157.93:3306/hotelsdb", "admin", "password");
+//    		con = DriverManager.getConnection(url + dbName, userName, password);
+    		con = DriverManager.getConnection("jdbc:mysql://3.219.159.250:3306/hotelsdb", "admin", "password");
     		System.out.print(con);
     		if (con == null) {
         		System.out.print("Connection timed out");
