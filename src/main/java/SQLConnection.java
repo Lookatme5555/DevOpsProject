@@ -17,17 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class SQLConnection {
-//	String url = "jdbc:mysql://3.95.197.177:3306/hotelsdb";
-//	String userName = "admin";
-//	String password = "password";
-//	String dbName = "hotelsdb";
 	
     protected Connection connect() {
     	Connection con = null;
     	try {
     		Class.forName("com.mysql.jdbc.Driver");
 //    		con = DriverManager.getConnection(url + dbName, userName, password);
-    		con = DriverManager.getConnection("jdbc:mysql://3.95.197.177:3306/hotelsdb", "admin", "password");
+    		con = DriverManager.getConnection("jdbc:mysql://3.219.159.250:3306/hotelsdb", "admin", "password");
     		System.out.print(con);
     		if (con == null) {
         		System.out.print("Connection timed out");
